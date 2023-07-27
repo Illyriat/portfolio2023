@@ -1,23 +1,65 @@
-import React from "react";
-import useScript from "../reusables/useScript";
+import React, { useState } from "react";
+import { generateComputerChoice } from "./logic/RPSLogic";
 
 function RockPaperScissors() {
-    useScript('/logic/RPSLogic.js');
+  const [userChoice, setUserChoice] = useState(null);
+  const [computerChoice, setComputerChoice] = useState(null);
+  const [result, setResult] = useState(null);
 
-    return(
-        <>
-            <h2>Computer Choice: <span id="computer-choice"></span></h2>
-            <h2>Your Choice: <span id="user-choice"></span></h2>
-            <p></p>
-            <button id="rock">Rock</button>
-            <button id="paper">Paper</button>
-            <button id="scissors">Scissors</button>
-            <p></p>
-            <h2>Result: <span id="result"></span></h2>
+  const userClick = (newUserChoice) => {
+    const newComputerChoice = generateComputerChoice();
+    let newResult;
+    if (newComputerChoice === newUserChoice) {
+      newResult = "Its a Draw!";
+    } else if (newComputerChoice === "rock" && newUserChoice === "paper") {
+      newResult = "You WIN!";
+    } else if (newComputerChoice === "rock" && newUserChoice === "scissors") {
+      newResult = "You LOST!";
+    } else if (newComputerChoice === "paper" && newUserChoice === "scissors") {
+      newResult = "You WIN!";
+    } else if (newComputerChoice === "paper" && newUserChoice === "rock") {
+      newResult = "You LOST!";
+    } else if (newComputerChoice === "scissors" && newUserChoice === "rock") {
+      newResult = "You WIN!";
+    } else if (newComputerChoice === "scissors" && newUserChoice === "paper") {
+      newResult = "You LOST!";
+    };
 
-            <script src="./logic/RPSlogic.js"></script>
-        </>
-    );
-};
+    setUserChoice(newUserChoice);
+    setComputerChoice(newComputerChoice);
+    setResult(newResult);
+  };
+
+  return (
+    <>
+      <h2>Computer Choice:  {computerChoice ? computerChoice : "Undecided"}</h2>
+      <h2>Your Choice: {userChoice ? userChoice : "Undecided"}</h2>
+      <p></p>
+      <button
+        onClick={() => {
+          userClick("rock");
+        }}
+      >
+        Rock
+      </button>
+      <button
+        onClick={() => {
+          userClick("paper");
+        }}
+      >
+        Paper
+      </button>
+      <button
+        onClick={() => {
+          userClick("scissors");
+        }}
+      >
+        Scissors
+      </button>
+      <p></p>
+      <h2>Result: {result ? result : "Select an option to play"}</h2>
+    </>
+  );
+}
 
 export default RockPaperScissors;

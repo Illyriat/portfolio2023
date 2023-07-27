@@ -4,6 +4,7 @@ import React from 'react';
 function Portfolio() {
     return(
         <>
+        Hello from the portfolio component
         </>
     );
 };
