@@ -1,0 +1,31 @@
+.game {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .game-board {
+    width: 300px;
+  }
+  
+  .status {
+    margin-bottom: 10px;
+  }
+  
+  .board-row:after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+  
+  .square {
+    float: left;
+    width: 100px;
+    height: 100px;
+    font-size: 24px;
+    text-align: center;
+    line-height: 100px;
+    border: 1px solid #999;
+  }

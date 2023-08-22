@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { generateComputerChoice } from "./logic/RPSLogic";
+import "./miniGameStyle/RPS.css";
 
 function RockPaperScissors() {
   const [userChoice, setUserChoice] = useState(null);
@@ -29,6 +30,7 @@ function RockPaperScissors() {
     setComputerChoice(newComputerChoice);
     setResult(newResult);
   };
+  
 
   return (
     <>

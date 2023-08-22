@@ -1,9 +1,11 @@
 import React from 'react';
 
+import './miniGameStyle/Chess.css';
+
 function Chess() {
     return(
         <>
-        Hello from the chess mini game
+        Hello from the Chess mini game
         </>
     );
 };

@@ -8,10 +8,13 @@ import Portfolio from '../components/pages/Portfolio';
 import Contact from '../components/pages/Contact';
 
 import RockPaperScissors from '../components/miniGames/RockPaperScissors';
+import TicTacToePVP from '../components/miniGames/TicTacToePVP';
+import TictacToePVE from '../components/miniGames/TicTacToePVE';
 import ConnectFour from '../components/miniGames/ConnectFour';
 import Chess from '../components/miniGames/Chess';
 
 import ErrorPage from '../components/pages/ErrorPage';
+
 
 function MainContainer() {
     return(
@@ -24,8 +27,10 @@ function MainContainer() {
                 <Route path='/contact' element={<Contact />} />
 
                 <Route path='/rockpaperscissors' element={<RockPaperScissors />} />
+                <Route path='/tictactoe-pvp' element={<TicTacToePVP />} />
+                <Route path='/tictactoe-pve' element={<TictacToePVE />} />
                 <Route path='/connectfour' element={<ConnectFour />} />
-                <Route path='chess' element={<Chess />} />
+                <Route path='/chess' element={<Chess />} />
 
                 <Route path="*" element={<ErrorPage />} />
             </Routes>

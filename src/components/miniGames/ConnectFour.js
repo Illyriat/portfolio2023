@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './miniGameStyle/ConnectFour.css';
+
 function ConnectFour() {
     return(
         <>
