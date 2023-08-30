@@ -33,7 +33,7 @@ function RockPaperScissors() {
   
 
   return (
-    <>
+    <div className="rps-box">
       <h2>Computer Choice:  {computerChoice ? computerChoice : "Undecided"}</h2>
       <h2>Your Choice: {userChoice ? userChoice : "Undecided"}</h2>
       <p></p>
@@ -44,6 +44,7 @@ function RockPaperScissors() {
       >
         Rock
       </button>
+
       <button
         onClick={() => {
           userClick("paper");
@@ -60,7 +61,7 @@ function RockPaperScissors() {
       </button>
       <p></p>
       <h2>Result: {result ? result : "Select an option to play"}</h2>
-    </>
+    </div>
   );
 }
 
