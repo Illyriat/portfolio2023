@@ -16,14 +16,14 @@ import { CSSTransition  } from 'react-transition-group';
 function NavBar() {
     return (
         <NavMain>
-            <NavItem icon={<Home />} />
-            <NavItem icon={<Portfolio />} />
+            <Link to='/' className='nav-item'><NavItem icon={<Home />} /></Link>
+            <Link to='/portfolio' className='nav-item'><NavItem icon={<Portfolio />} /></Link>
             <NavItem icon={<GameIcon />}>
                 <DropdownMenu></DropdownMenu>
             </NavItem>
-            <NavItem icon={<LinkedIn />} /> 
-            <NavItem icon={<Github />} /> 
-            <NavItem icon={<Email />} />
+            <Link to='https://www.linkedin.com/in/james-robson-m/' target='_blank' className='nav-item'><NavItem icon={<LinkedIn />} /> </Link>
+            <Link to='https://github.com/Illyriat' target='_blank' className='nav-item'><NavItem icon={<Github />} /> </Link>
+            <Link to='/contact' className='nav-item'><NavItem icon={<Email />} /></Link>
             <NavItem icon={<Settings />}>
                 <DropdownMenuSettings></DropdownMenuSettings>
             </NavItem>    
