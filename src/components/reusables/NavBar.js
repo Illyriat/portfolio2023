@@ -8,7 +8,6 @@ import { ReactComponent as Github } from './reusableStyles/navicons/github.svg';
 import { ReactComponent as Email } from './reusableStyles/navicons/email.svg';
 import { ReactComponent as Settings} from './reusableStyles/navicons/settings.svg';
 import { ReactComponent as Home } from './reusableStyles/navicons/home.svg';
-// import { ReactComponent as Toggle } from './reusableStyles/navicons/toggle.svg';
 import { ReactComponent as Portfolio } from './reusableStyles/navicons/portfolio.svg';
 
 import { CSSTransition  } from 'react-transition-group';
